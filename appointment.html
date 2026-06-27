@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Appointment | PawCare Veterinary Clinic</title>
+<link rel="icon" href="https://images.unsplash.com/photo-1517849845537-4d257902861a?q=80&w=64&h=64&fit=crop">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader"><i class="bi bi-heart-pulse-fill loader-paw"></i></div>
+
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="logo-icon"><i class="bi bi-heart-pulse-fill"></i></span>Paw<span>Care</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="doctors.html">Doctors</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="appointment.html" class="btn btn-primary" style="padding:11px 22px;">Book Appointment</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i></button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <h1>Book an Appointment</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a> / <span>Appointment</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="container appointment-wrap">
+
+    <!-- Info Panel -->
+    <div class="appt-info fade-up">
+      <h3>Booking Information</h3>
+      <p>Fill in the form and our front desk will confirm your slot by phone within a few hours. For urgent cases, please call our emergency line directly.</p>
+
+      <div class="appt-info-item"><i class="bi bi-telephone-fill"></i><div><h5>Call Us</h5><span>+91 123 456 7890</span></div></div>
+      <div class="appt-info-item"><i class="bi bi-envelope-fill"></i><div><h5>Email Us</h5><span>care@pawcareclinic.com</span></div></div>
+      <div class="appt-info-item"><i class="bi bi-geo-alt-fill"></i><div><h5>Visit Us</h5><span>15-7-22, Main Road, Sarpavaram, Kakinada, Andhra Pradesh</span></div></div>
+
+      <div class="appt-hours">
+        <div class="hrow"><span>Mon - Fri</span><span>8:00 AM - 9:00 PM</span></div>
+        <div class="hrow"><span>Saturday</span><span>9:00 AM - 7:00 PM</span></div>
+        <div class="hrow"><span>Sunday</span><span>10:00 AM - 4:00 PM</span></div>
+        <div class="hrow"><span>Emergency</span><span>24/7</span></div>
+      </div>
+    </div>
+
+    <!-- Booking Form -->
+    <div class="form-card fade-up">
+      <h3 class="section-title" style="font-size:1.6rem;">Pet Appointment Form</h3>
+      <p style="color:var(--text-light);margin-bottom:30px;font-size:.92rem;">All fields marked are required. We'll confirm your slot shortly after submission.</p>
+
+      <form id="appointmentForm" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="ownerName">Owner Name *</label>
+            <input type="text" id="ownerName" placeholder="e.g. Ananya Rao">
+            <span class="error-msg">Please enter your name.</span>
+          </div>
+          <div class="form-group">
+            <label for="petName">Pet Name *</label>
+            <input type="text" id="petName" placeholder="e.g. Bruno">
+            <span class="error-msg">Please enter your pet's name.</span>
+          </div>
+          <div class="form-group">
+            <label for="petType">Pet Type *</label>
+            <select id="petType">
+              <option value="">Select Type</option>
+              <option>Dog</option><option>Cat</option><option>Bird</option>
+              <option>Rabbit</option><option>Other</option>
+            </select>
+            <span class="error-msg">Please select a pet type.</span>
+          </div>
+          <div class="form-group">
+            <label for="breed">Breed *</label>
+            <input type="text" id="breed" placeholder="e.g. Labrador">
+            <span class="error-msg">Please enter the breed.</span>
+          </div>
+          <div class="form-group">
+            <label for="petAge">Age (years) *</label>
+            <input type="number" id="petAge" min="0" max="40" placeholder="e.g. 3">
+            <span class="error-msg">Please enter a valid age.</span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" placeholder="e.g. +91 98765 43210">
+            <span class="error-msg">Please enter a valid phone number.</span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" placeholder="e.g. you@email.com">
+            <span class="error-msg">Please enter a valid email.</span>
+          </div>
+          <div class="form-group">
+            <label for="apptDate">Preferred Date *</label>
+            <input type="date" id="apptDate">
+            <span class="error-msg">Please choose a date.</span>
+          </div>
+          <div class="form-group full">
+            <label for="apptTime">Preferred Time *</label>
+            <select id="apptTime">
+              <option value="">Select Time Slot</option>
+              <option>09:00 AM - 10:00 AM</option>
+              <option>10:00 AM - 11:00 AM</option>
+              <option>11:00 AM - 12:00 PM</option>
+              <option>02:00 PM - 03:00 PM</option>
+              <option>04:00 PM - 05:00 PM</option>
+              <option>06:00 PM - 07:00 PM</option>
+            </select>
+            <span class="error-msg">Please choose a time slot.</span>
+          </div>
+          <div class="form-group full">
+            <label for="reason">Reason for Visit *</label>
+            <textarea id="reason" rows="4" placeholder="Briefly describe symptoms or the purpose of the visit..."></textarea>
+            <span class="error-msg">Please tell us the reason for the visit.</span>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block"><i class="bi bi-calendar2-check"></i> Confirm Appointment</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Success Modal -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal-box">
+    <div class="modal-icon"><i class="bi bi-check-lg"></i></div>
+    <h3>Appointment Requested!</h3>
+    <p>Thank you! We've received your booking request and our team will call you shortly to confirm the slot.</p>
+    <button class="btn btn-primary btn-block" onclick="closeSuccessModal()">Done</button>
+  </div>
+</div>
+
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <a href="index.html" class="footer-logo"><i class="bi bi-heart-pulse-fill"></i> Paw<span>Care</span></a>
+      <p>PawCare Veterinary Clinic has been the neighborhood's trusted partner in pet health for over 15 years.</p>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a><a href="#"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Quick Links</h5><ul>
+      <li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li>
+      <li><a href="doctors.html">Our Doctors</a></li><li><a href="gallery.html">Gallery</a></li>
+      <li><a href="appointment.html">Book Appointment</a></li></ul>
+    </div>
+    <div class="footer-col"><h5>Services</h5><ul>
+      <li><a href="services.html">Vaccination</a></li><li><a href="services.html">Surgery</a></li>
+      <li><a href="services.html">Dental Care</a></li><li><a href="services.html">Grooming</a></li>
+      <li><a href="services.html">Emergency Care</a></li></ul>
+    </div>
+    <div class="footer-col"><h5>Contact Info</h5>
+      <div class="footer-contact-item"><i class="bi bi-geo-alt"></i><span>15-7-22, Main Road, Sarpavaram, Kakinada, Andhra Pradesh - 533005</span></div>
+      <div class="footer-contact-item"><i class="bi bi-telephone"></i><span>+91 123 456 7890</span></div>
+      <div class="footer-contact-item"><i class="bi bi-envelope"></i><span>care@pawcareclinic.com</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 PawCare Veterinary Clinic. All rights reserved.</div>
+</footer>
+
+<div class="floating-btns">
+  <a href="tel:+911234567890" class="float-btn emergency-btn" aria-label="Emergency Call"><i class="bi bi-telephone-fill"></i></a>
+  <a href="https://wa.me/911234567890" target="_blank" class="float-btn whatsapp-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+  <button class="float-btn back-to-top" id="backToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

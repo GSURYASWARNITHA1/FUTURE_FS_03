@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | PawCare Veterinary Clinic</title>
+<link rel="icon" href="https://images.unsplash.com/photo-1517849845537-4d257902861a?q=80&w=64&h=64&fit=crop">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader"><i class="bi bi-heart-pulse-fill loader-paw"></i></div>
+
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="logo-icon"><i class="bi bi-heart-pulse-fill"></i></span>Paw<span>Care</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="doctors.html">Doctors</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="appointment.html" class="btn btn-primary" style="padding:11px 22px;">Book Appointment</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i></button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <h1>Our Gallery</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a> / <span>Gallery</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="clinic">Clinic</button>
+      <button class="filter-btn" data-filter="patients">Patients</button>
+      <button class="filter-btn" data-filter="team">Team</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item fade-up" data-category="clinic">
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=700" alt="Clinic reception">
+        <div class="gallery-overlay"><h4>Reception Lounge</h4><i class="bi bi-zoom-in"></i></div>
+      </div>
+      <div class="gallery-item fade-up" data-category="patients">
+        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?q=80&w=700" alt="Dog patient">
+        <div class="gallery-overlay"><h4>Happy Patient — Bruno</h4><i class="bi bi-zoom-in"></i></div>
+      </div>
+      <div class="gallery-item fade-up" data-category="team">
+        <img src="https://images.unsplash.com/photo-1576765608866-5b51046452be?q=80&w=700" alt="Vet team">
+        <div class="gallery-overlay"><h4>Our Caring Team</h4><i class="bi bi-zoom-in"></i></div>
+      </div>
+      <div class="gallery-item fade-up" data-category="clinic">
+        <img src="https://images.unsplash.com/photo-1612531386530-97286d97c2d2?q=80&w=700" alt="Surgery room">
+        <div class="gallery-overlay"><h4>Surgical Suite</h4><i class="bi bi-zoom-in"></i></div>
+      </div>
+      <div class="gallery-item fade-up" data-category="patients">
+        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=700" alt="Cat patient">
+        <div class="gallery-overlay"><h4>Happy Patient — Whiskers</h4><i class="bi bi-zoom-in"></i></div>
+      </div>
+      <div class="gallery-item fade-up" data-category="events">
+        <img src="https://images.unsplash.com/photo-1593871075120-982e042088d8?q=80&w=700" alt="Adoption drive">
+        <div class="gallery-overlay"><h4>Community Adoption Drive</h4><i class="bi bi-zoom-in"></i></div>
+      </div>
+      <div class="gallery-item fade-up" data-category="team">
+        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=700" alt="Vet examining puppy">
+        <div class="gallery-overlay"><h4>Routine Examination</h4><i class="bi bi-zoom-in"></i></div>
+      </div>
+      <div class="gallery-item fade-up" data-category="patients">
+        <img src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?q=80&w=700" alt="Rabbit patient">
+        <div class="gallery-overlay"><h4>Happy Patient — Coco</h4><i class="bi bi-zoom-in"></i></div>
+      </div>
+      <div class="gallery-item fade-up" data-category="events">
+        <img src="https://images.unsplash.com/photo-1599443015574-be5fe8a05783?q=80&w=700" alt="Vaccination camp">
+        <div class="gallery-overlay"><h4>Free Vaccination Camp</h4><i class="bi bi-zoom-in"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close"><i class="bi bi-x-lg"></i></span>
+  <img src="" alt="Enlarged view">
+</div>
+
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <a href="index.html" class="footer-logo"><i class="bi bi-heart-pulse-fill"></i> Paw<span>Care</span></a>
+      <p>PawCare Veterinary Clinic has been the neighborhood's trusted partner in pet health for over 15 years.</p>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a><a href="#"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Quick Links</h5><ul>
+      <li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li>
+      <li><a href="doctors.html">Our Doctors</a></li><li><a href="gallery.html">Gallery</a></li>
+      <li><a href="appointment.html">Book Appointment</a></li></ul>
+    </div>
+    <div class="footer-col"><h5>Services</h5><ul>
+      <li><a href="services.html">Vaccination</a></li><li><a href="services.html">Surgery</a></li>
+      <li><a href="services.html">Dental Care</a></li><li><a href="services.html">Grooming</a></li>
+      <li><a href="services.html">Emergency Care</a></li></ul>
+    </div>
+    <div class="footer-col"><h5>Contact Info</h5>
+      <div class="footer-contact-item"><i class="bi bi-geo-alt"></i><span>15-7-22, Main Road, Sarpavaram, Kakinada, Andhra Pradesh - 533005</span></div>
+      <div class="footer-contact-item"><i class="bi bi-telephone"></i><span>+91 123 456 7890</span></div>
+      <div class="footer-contact-item"><i class="bi bi-envelope"></i><span>care@pawcareclinic.com</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 PawCare Veterinary Clinic. All rights reserved.</div>
+</footer>
+
+<div class="floating-btns">
+  <a href="tel:+911234567890" class="float-btn emergency-btn" aria-label="Emergency Call"><i class="bi bi-telephone-fill"></i></a>
+  <a href="https://wa.me/911234567890" target="_blank" class="float-btn whatsapp-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+  <button class="float-btn back-to-top" id="backToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
