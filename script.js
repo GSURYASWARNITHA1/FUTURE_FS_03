@@ -1,7 +1,5 @@
-/* =========================================================
-   PawCare Veterinary Clinic — Global Script
-   Organized into clear, reusable functions.
-   ========================================================= */
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   initLoader();
