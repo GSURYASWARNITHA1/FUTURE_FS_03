@@ -18,7 +18,7 @@ pawcare/
 ├── style.css            → Single global stylesheet (all pages)
 ├── js/
 │   └── script.js        → Single global JavaScript file (all pages)
-└── images/               → (placeholder folder — currently using Unsplash URLs)
+└── images              → ( — currently using Unsplash URLs)
 ```
 
 
